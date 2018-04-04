@@ -56,7 +56,6 @@ function new_task_form(state = empty_form, action) {
 }
 
 let empty_details_form = {
-    user_id: "",
     title: "",
     description: "",
     assigned_to: "",
@@ -74,7 +73,6 @@ function tasks_details_form(state = empty_details_form, action) {
             break;
         case "SET_TOKEN":
             let newState = {
-                user_id: action.token.user_id,
                 title: "",
                 description: "",
                 assigned_to: "",

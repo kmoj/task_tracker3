@@ -44,7 +44,7 @@ function TaskDetails(props) {
         props.dispatch(action);
 
 
-        if (task.user_id && task.title && task.description && task.assigned_to && (task.session_time%15 == 0) ) {
+        if (task.title && task.description && task.assigned_to && (task.session_time%15 == 0) ) {
 
             let time = new Number(task.time);
             let sTime = new Number(task.session_time);
@@ -52,7 +52,6 @@ function TaskDetails(props) {
 
             let data = {
                 id: taskId,
-                user_id: task.user_id,
                 title: task.title,
                 description: task.description,
                 assigned_to: task.assigned_to,

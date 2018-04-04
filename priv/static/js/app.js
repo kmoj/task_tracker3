@@ -49260,7 +49260,7 @@ function TaskDetails(props) {
 
         props.dispatch(action);
 
-        if (task.user_id && task.title && task.description && task.assigned_to && task.session_time % 15 == 0) {
+        if (task.title && task.description && task.assigned_to && task.session_time % 15 == 0) {
 
             var time = new Number(task.time);
             var sTime = new Number(task.session_time);
@@ -49268,7 +49268,6 @@ function TaskDetails(props) {
 
             var _data = {
                 id: taskId,
-                user_id: task.user_id,
                 title: task.title,
                 description: task.description,
                 assigned_to: task.assigned_to,
@@ -50259,7 +50258,6 @@ function new_task_form() {
 }
 
 var empty_details_form = {
-    user_id: "",
     title: "",
     description: "",
     assigned_to: "",
@@ -50280,7 +50278,6 @@ function tasks_details_form() {
             break;
         case "SET_TOKEN":
             var newState = {
-                user_id: action.token.user_id,
                 title: "",
                 description: "",
                 assigned_to: "",
