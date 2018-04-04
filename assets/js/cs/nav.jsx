@@ -52,7 +52,7 @@ function Nav(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return {token: state.token};
 }
 

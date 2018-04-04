@@ -114,6 +114,7 @@ function TaskDetails(props) {
         };
 
         props.dispatch(actionClearTimeForm);
+        //console.log("cancel clicked");
         switch_input_btn_disable();
 
 
@@ -137,7 +138,7 @@ function TaskDetails(props) {
         let time_spent_input = $("#session_time");
         let complete_input = $("#complete");
 
-        let disable = title_input.attr("disabled");
+        let disable = !edit_btn.attr("hidden");
 
         disable = disable ? false : true;
 
@@ -218,7 +219,7 @@ function TaskDetails(props) {
             </div>
         </div>
         <button id="editBtn" className="btn btn-primary" onClick={edit_btn_clicked} hidden={false} disabled={task.complete}>Edit</button>
-        <button id="updateBtn" className="btn btn-primary" style={{marginLeft: "10px"}} onClick={update_task} hidden={true}>Update</button>
+        <button id="updateBtn" className="btn btn-primary" onClick={update_task} hidden={true}>Update</button>
         <button id="cancelBtn" className="btn btn-danger" style={{marginLeft: "10px"}}
                 onClick={cancel_btn_clicked} hidden={true}>Cancel
         </button>
@@ -226,7 +227,7 @@ function TaskDetails(props) {
 }
 
 function state2props(state) {
-    console.log("task details state2props", state);
+    //console.log("task details state2props", state);
     return {
         token: state.token,
         tasks_details_form: state.tasks_details_form,

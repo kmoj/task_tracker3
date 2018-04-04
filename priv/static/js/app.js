@@ -48513,7 +48513,7 @@ var TheServer = function () {
                     dataType: "json",
                     contentType: "application/json; charset=UTF-8",
                     success: function success(resp) {
-                        console.log(resp.data);
+                        //console.log(resp.data);
                         if (resp.data != null) {
                             var action = {
                                 type: "UPDATE_DETAILS_FORM",
@@ -48601,7 +48601,7 @@ var TheServer = function () {
                 contentType: "application/json; charset=UTF-8",
                 data: JSON.stringify({ task: task }),
                 success: function success(reps) {
-                    console.log("update reps", reps);
+                    //console.log("update reps", reps);
                     var action = {
                         type: "UPDATE_TASK",
                         task: reps.data
@@ -48830,7 +48830,7 @@ function Login(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return { login_form: state.login_form, token: state.token };
 }
 
@@ -48945,7 +48945,7 @@ function Nav(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return { token: state.token };
 }
 
@@ -49180,7 +49180,7 @@ function RegisterForm(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return { register_form: state.register_form, users: state.users };
 }
 
@@ -49326,6 +49326,7 @@ function TaskDetails(props) {
         };
 
         props.dispatch(actionClearTimeForm);
+        //console.log("cancel clicked");
         switch_input_btn_disable();
     }
 
@@ -49345,7 +49346,7 @@ function TaskDetails(props) {
         var time_spent_input = $("#session_time");
         var complete_input = $("#complete");
 
-        var disable = title_input.attr("disabled");
+        var disable = !edit_btn.attr("hidden");
 
         disable = disable ? false : true;
 
@@ -49505,7 +49506,7 @@ function TaskDetails(props) {
         ),
         _react2.default.createElement(
             'button',
-            { id: 'updateBtn', className: 'btn btn-primary', style: { marginLeft: "10px" }, onClick: update_task, hidden: true },
+            { id: 'updateBtn', className: 'btn btn-primary', onClick: update_task, hidden: true },
             'Update'
         ),
         _react2.default.createElement(
@@ -49518,7 +49519,7 @@ function TaskDetails(props) {
 }
 
 function state2props(state) {
-    console.log("task details state2props", state);
+    //console.log("task details state2props", state);
     return {
         token: state.token,
         tasks_details_form: state.tasks_details_form,
@@ -49826,7 +49827,7 @@ function Task(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return { token: state.token, new_task_form: state.new_task_form };
 }
 
@@ -49962,7 +49963,7 @@ var _users2 = _interopRequireDefault(_users);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function tracker_init(store) {
-    console.log("store ", store);
+    //console.log("store ", store);
     _reactDom2.default.render(_react2.default.createElement(
         _reactRedux.Provider,
         { store: store },
@@ -50075,7 +50076,7 @@ var _reactRouterDom = require('react-router-dom');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function User(params) {
-    console.log(params);
+    //console.log(params);
     return _react2.default.createElement(
         'p',
         null,
@@ -50368,7 +50369,7 @@ function register_form() {
 }
 
 function root_reducer(state0, action) {
-    console.log("state0", state0);
+    //console.log("state0", state0);
     var reducer = (0, _redux.combineReducers)({
         users: users,
         token: token,
@@ -50379,7 +50380,7 @@ function root_reducer(state0, action) {
         register_form: register_form
     });
     var state1 = reducer(state0, action);
-    console.log("state1", state1);
+    // console.log("state1", state1);
     return (0, _deepFreeze2.default)(state1);
 }
 

@@ -3,7 +3,7 @@ import _ from "underscore";
 import { Link } from 'react-router-dom';
 
 function User(params) {
-    console.log(params);
+    //console.log(params);
     return ( <p>{params.user.username} - <Link to={"/users/" + params.user.id}>posts</Link></p>);
 }
 

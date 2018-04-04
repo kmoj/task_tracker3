@@ -156,7 +156,7 @@ function RegisterForm(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return {register_form: state.register_form, users: state.users};
 }
 

@@ -81,7 +81,7 @@ function Login(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return {login_form: state.login_form, token: state.token};
 }
 

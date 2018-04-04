@@ -64,7 +64,7 @@ class TheServer {
                 dataType: "json",
                 contentType: "application/json; charset=UTF-8",
                 success: (resp) => {
-                    console.log(resp.data);
+                    //console.log(resp.data);
                     if (resp.data != null) {
                         let action = {
                             type: "UPDATE_DETAILS_FORM",
@@ -148,7 +148,7 @@ class TheServer {
             contentType: "application/json; charset=UTF-8",
             data: JSON.stringify({task: task}),
             success: (reps) => {
-                console.log("update reps", reps);
+                //console.log("update reps", reps);
                 let action = {
                     type: "UPDATE_TASK",
                     task: reps.data,

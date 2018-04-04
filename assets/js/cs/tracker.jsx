@@ -16,7 +16,7 @@ import Task from "./task";
 import Users from './users';
 
 export default function tracker_init(store) {
-    console.log("store ", store);
+    //console.log("store ", store);
     ReactDOM.render(
         <Provider store={store}>
             <TaskTracker/>

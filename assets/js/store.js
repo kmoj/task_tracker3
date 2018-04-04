@@ -154,7 +154,7 @@ function register_form(state = empty_register_form, action) {
 
 
 function root_reducer(state0, action) {
-    console.log("state0", state0);
+    //console.log("state0", state0);
     let reducer = combineReducers({
         users: users,
         token: token,
@@ -165,7 +165,7 @@ function root_reducer(state0, action) {
         register_form: register_form,
     });
     let state1 = reducer(state0, action);
-    console.log("state1", state1);
+    // console.log("state1", state1);
     return deepFreeze(state1);
 }
 

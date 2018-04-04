@@ -52,7 +52,7 @@ function Task(props) {
 }
 
 function state2props(state) {
-    console.log("task form state2props", state);
+    //console.log("task form state2props", state);
     return {token: state.token, new_task_form: state.new_task_form};
 }
 
