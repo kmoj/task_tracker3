@@ -16,7 +16,7 @@ function Nav(props) {
                         <NavItem>
                             <Link to="/" strict={true} exact={true} activeClassName="active" className="nav-link">Assign Task</Link>
                         </NavItem>
-                        <NavItem>
+                        <NavItem style={{marginLeft: "10px"}}>
                             <Link to="/mytasks" strict={true} exact={true} activeClassName="active" className="nav-link">My
                                 Tasks</Link>
                         </NavItem>

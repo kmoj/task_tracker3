@@ -48889,7 +48889,7 @@ function Nav(props) {
                 ),
                 _react2.default.createElement(
                     _reactstrap.NavItem,
-                    null,
+                    { style: { marginLeft: "10px" } },
                     _react2.default.createElement(
                         _reactRouterDom.Link,
                         { to: '/mytasks', strict: true, exact: true, activeClassName: 'active', className: 'nav-link' },
@@ -49482,7 +49482,7 @@ function TaskDetails(props) {
         ),
         _react2.default.createElement(
             'button',
-            { id: 'updateBtn', className: 'btn btn-primary', onClick: update_task, hidden: true },
+            { id: 'updateBtn', className: 'btn btn-primary', style: { marginLeft: "10px" }, onClick: update_task, hidden: true },
             'Update'
         ),
         _react2.default.createElement(

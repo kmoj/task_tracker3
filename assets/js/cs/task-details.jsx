@@ -209,7 +209,7 @@ function TaskDetails(props) {
             </div>
         </div>
         <button id="editBtn" className="btn btn-primary" onClick={edit_btn_clicked} hidden={false} disabled={task.complete}>Edit</button>
-        <button id="updateBtn" className="btn btn-primary" onClick={update_task} hidden={true}>Update</button>
+        <button id="updateBtn" className="btn btn-primary" style={{marginLeft: "10px"}} onClick={update_task} hidden={true}>Update</button>
         <button id="cancelBtn" className="btn btn-danger" style={{marginLeft: "10px"}}
                 onClick={cancel_btn_clicked} hidden={true}>Cancel
         </button>
