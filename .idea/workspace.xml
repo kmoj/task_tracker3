@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29ffec86-0534-47d5-9da5-b478871ac67d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/cs/task-details.jsx" afterPath="$PROJECT_DIR$/assets/js/cs/task-details.jsx" />
-    </list>
+    <list default="true" id="29ffec86-0534-47d5-9da5-b478871ac67d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -327,15 +325,15 @@
       <workItem from="1522698499078" duration="27373000" />
       <workItem from="1522791270221" duration="16182000" />
       <workItem from="1522818303280" duration="1933000" />
-      <workItem from="1522821220142" duration="5438000" />
+      <workItem from="1522821220142" duration="6034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149053000" />
+    <option name="totallyTimeSpent" value="149649000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20204978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
