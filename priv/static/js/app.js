@@ -48855,9 +48855,23 @@ var _reactRouterDom = require('react-router-dom');
 
 var _reactstrap = require('reactstrap');
 
+var _api = require('../api');
+
+var _api2 = _interopRequireDefault(_api);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Nav(props) {
+
+    function logOut() {
+
+        var action = {
+            type: "SET_TOKEN",
+            token: ""
+        };
+
+        props.dispatch(action);
+    }
 
     if (props.token.user_id) {
 
@@ -48904,9 +48918,9 @@ function Nav(props) {
                 props.token.username,
                 ' | ',
                 _react2.default.createElement(
-                    'a',
-                    { href: "/" },
-                    'Log out'
+                    _reactRouterDom.Link,
+                    { exact: true, to: '/', onClick: logOut },
+                    'Log Out'
                 )
             )
         );

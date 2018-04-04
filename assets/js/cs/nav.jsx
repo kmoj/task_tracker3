@@ -2,8 +2,20 @@ import React from 'react';
 import {connect} from "react-redux";
 import {NavLink, Link, Redirect} from 'react-router-dom';
 import {NavItem} from 'reactstrap';
+import api from "../api";
 
 function Nav(props) {
+
+    function logOut() {
+
+        let action = {
+            type: "SET_TOKEN",
+            token: "",
+        };
+
+        props.dispatch(action);
+
+    }
 
     if (props.token.user_id) {
 
@@ -22,7 +34,7 @@ function Nav(props) {
                         </NavItem>
                     </ul>
               <span className="navbar-text">
-                  Hi, {props.token.username} | <a href={"/"}>Log out</a>
+                  Hi, {props.token.username} | <Link exact={true} to="/" onClick={logOut}>Log Out</Link>
               </span>
             </nav>
         );
