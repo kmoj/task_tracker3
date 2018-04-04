@@ -105,6 +105,16 @@ function TaskDetails(props) {
     function cancel_btn_clicked() {
 
         api.request_task_by_id(taskId);
+        let clearTimeForm = {
+            session_time: 0
+        };
+
+        let actionClearTimeForm = {
+            type: "UPDATE_DETAILS_FORM",
+            task: clearTimeForm,
+        };
+
+        props.dispatch(actionClearTimeForm);
         switch_input_btn_disable();
 
 
@@ -190,7 +200,7 @@ function TaskDetails(props) {
         <div className="row">
             <div className={"col-6"}>
                 <div className={"form-group" + (task.isAssignClicked && (task.session_time%15 != 0) ? " has-error" : "")}>
-                    <Label for="time">Time Spent: </Label>
+                    <Label for="time">Session Time Spent: </Label>
                     <Input type="number" id="session_time" disabled={true} value= {task.session_time} onChange={input_update}/>
                     {task.isAssignClicked && (task.session_time%15 != 0) &&
                     <div className="help-block">Time input should be an increment of 15</div>

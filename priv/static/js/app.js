@@ -49303,6 +49303,16 @@ function TaskDetails(props) {
     function cancel_btn_clicked() {
 
         _api2.default.request_task_by_id(taskId);
+        var clearTimeForm = {
+            session_time: 0
+        };
+
+        var actionClearTimeForm = {
+            type: "UPDATE_DETAILS_FORM",
+            task: clearTimeForm
+        };
+
+        props.dispatch(actionClearTimeForm);
         switch_input_btn_disable();
     }
 
@@ -49444,7 +49454,7 @@ function TaskDetails(props) {
                     _react2.default.createElement(
                         _reactstrap.Label,
                         { 'for': 'time' },
-                        'Time Spent: '
+                        'Session Time Spent: '
                     ),
                     _react2.default.createElement(_reactstrap.Input, { type: 'number', id: 'session_time', disabled: true, value: task.session_time, onChange: input_update }),
                     task.isAssignClicked && task.session_time % 15 != 0 && _react2.default.createElement(
