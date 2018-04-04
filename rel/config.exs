@@ -50,7 +50,7 @@ release :task_tracker do
   set applications: [
     :runtime_tools
   ]
-#  set cookie: :"jBZq0eTamPYdeRQGPmwEb41TILpI0DC7F4BoYL0bYxmP7ymTfGdegr2x2+xhaqTt"
+  set cookie: :"jBZq0eTamPYdeRQGPmwEb41TILpI0DC7F4BoYL0bYxmP7ymTfGdegr2x2+xhaqTt"
   set vm_args: "rel/vm.args"
 end
 
