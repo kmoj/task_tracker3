@@ -1,23 +1,23 @@
 # Development Decisions
 Login:
- 1.username and password fields are required.
+  1.username and password fields are required.
  
 Register:
- 1.username, password and confirm password fields are required.
- 2.password should have at least 8 characters.
- 3.username should be unique to other existing users' username.
+  1.username, password and confirm password fields are required.
+  2.password should have at least 8 characters.
+  3.username should be unique to other existing users' username.
  
  Assign New Task:
-  1.tile, assignee and description fields are required.
-  2.no need to specify time and completeness flieds. They are 
+   1.tile, assignee and description fields are required.
+   2.no need to specify time and completeness flieds. They are 
     defult to 0 and false at insertion.
   
  My Task list:
-  1. one colume for tasks assigned to the login user,
+   1. one colume for tasks assigned to the login user,
      another one for tasks assigned by the login user.
-  2. tasks are sort by completeness and last updated time.
-  3. finished task have background color of green.
-  4. unfinished task have background color of yellow.
+   2. tasks are sort by completeness and last updated time.
+   3. finished task have background color of green.
+   4. unfinished task have background color of yellow.
   
   Task Details:
    1. clicks the edit button will enable the user to edit fields
