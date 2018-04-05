@@ -1,15 +1,19 @@
 # Development Decisions
 Login:
+
   1.username and password fields are required.
  
 Register:
+
   1.username, password and confirm password fields are required.
   
   2.password should have at least 8 characters.
   
   3.username should be unique to other existing users' username.
+  
  
  Assign New Task:
+ 
    1.tile, assignee and description fields are required.
    
    2.no need to specify time and completeness flieds. They are 
